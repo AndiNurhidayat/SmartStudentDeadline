@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Riwayat Tugas - Smart Student Deadline</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00bfff, #80dfff);
+      color: #000;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 70px;
+      height: 100vh;
+      background-color: #0aace6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .sidebar-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #d6faff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .main-content {
+      margin-left: 80px;
+      padding: 20px;
+      transition: margin 0.3s ease;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .history-list {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 700px;
+    }
+
+    .task-item {
+      background-color: #f0f0f0;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 5px solid #00bfff;
+      border-radius: 8px;
+    }
+
+    .task-item h3 {
+      margin: 0 0 5px;
+    }
+
+    .task-item p {
+      margin: 2px 0;
+      font-size: 14px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    @media (max-width: 600px) {
+      .sidebar {
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        justify-content: space-around;
+        padding: 5px 0;
+        z-index: 1000;
+      }
+
+      .main-content {
+        margin-left: 0;
+        margin-bottom: 70px;
+        padding: 10px;
+      }
+
+      .sidebar-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin-bottom: 2px;
+      }
+
+      .sidebar a {
+        font-size: 10px;
+      }
+
+      .history-list {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="home.html">
+      <div class="sidebar-icon">🏠</div>
+      Halaman
+    </a>
+    <a href="task-list.html">
+      <div class="sidebar-icon">📋</div>
+      Tugas
+    </a>
+    <a href="kategori.html">
+      <div class="sidebar-icon">📑</div>
+      Kategori
+    </a>
+    <a href="riwayat.html">
+      <div class="sidebar-icon">📜</div>
+      Riwayat
+    </a>
+    <a href="profil.html">
+      <div class="sidebar-icon">👤</div>
+      Profil
+    </a>
+  </div>
+
+  <div class="main-content">
+    <h2>Riwayat Tugas</h2>
+    <div class="history-list">
+      <div class="task-item">
+        <h3 class="completed">Tugas Bahasa Inggris</h3>
+        <p><strong>Mata Kuliah:</strong> Bahasa Inggris</p>
+        <p><strong>Tanggal Selesai:</strong> 10 Mei 2025</p>
+        <p><strong>Status:</strong> Selesai</p>
+      </div>
+      <div class="task-item">
+        <h3 class="completed">Makalah Sistem Operasi</h3>
+        <p><strong>Mata Kuliah:</strong> Sistem Operasi</p>
+        <p><strong>Tanggal Selesai:</strong> 5 Mei 2025</p>
+        <p><strong>Status:</strong> Selesai</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

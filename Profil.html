@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Profil Pengguna - Smart Student Deadline</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00bfff, #80dfff);
+      color: #000;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 70px;
+      height: 100vh;
+      background-color: #0aace6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .sidebar-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #d6faff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .main-content {
+      margin-left: 80px;
+      padding: 20px;
+      transition: margin 0.3s ease;
+    }
+
+    .profile-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00bfff;
+      margin-bottom: 15px;
+    }
+
+    .profile-info h2 {
+      margin: 10px 0 5px;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
+    }
+
+    .profile-form {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .profile-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .profile-form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .profile-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .sidebar {
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        justify-content: space-around;
+        padding: 5px 0;
+        z-index: 1000;
+      }
+
+      .main-content {
+        margin-left: 0;
+        margin-bottom: 70px;
+        padding: 10px;
+      }
+
+      .sidebar-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin-bottom: 2px;
+      }
+
+      .sidebar a {
+        font-size: 10px;
+      }
+
+      .profile-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="home.html">
+      <div class="sidebar-icon">🏠</div>
+      Halaman
+    </a>
+    <a href="task-list.html">
+      <div class="sidebar-icon">📋</div>
+      Tugas
+    </a>
+    <a href="kategori.html">
+      <div class="sidebar-icon">📑</div>
+      Kategori
+    </a>
+    <a href="riwayat.html">
+      <div class="sidebar-icon">📜</div>
+      Riwayat
+    </a>
+    <a href="profil.html">
+      <div class="sidebar-icon">👤</div>
+      Profil
+    </a>
+  </div>
+
+  <div class="main-content">
+    <div class="profile-card">
+      <img src="logo/profile-default.png" alt="Foto Profil" class="profile-pic" />
+      <div class="profile-info">
+        <h2>Nama Pengguna</h2>
+        <p>user@email.com</p>
+      </div>
+      <form class="profile-form">
+        <label for="name">Nama</label>
+        <input type="text" id="name" placeholder="Masukkan nama anda" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Masukkan email anda" />
+
+        <label for="password">Password Baru</label>
+        <input type="password" id="password" placeholder="*******" />
+
+        <button type="submit">Perbarui Profil</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

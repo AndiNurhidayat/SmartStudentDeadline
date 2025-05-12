@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Beranda - Smart Student Deadline</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00bfff, #80dfff);
+      color: #000;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 70px;
+      height: 100vh;
+      background-color: #0aace6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .sidebar-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #d6faff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .main-content {
+      margin-left: 80px;
+      padding: 20px;
+      transition: margin 0.3s ease;
+    }
+
+    .date-display {
+      background-color: white;
+      width: 120px;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .date-display .day {
+      font-size: 40px;
+      color: #00bfff;
+      margin: 0;
+    }
+
+    .date-display .month {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .tambah-btn {
+      display: inline-block;
+      background-color: #000;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.2s;
+    }
+
+    .tambah-btn:hover {
+      background-color: #333;
+    }
+
+    .task-section {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .task-item {
+      background-color: #e7f9f7;
+      border-left: 5px solid #00bfff;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+
+    .task-item h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .task-item p {
+      margin: 3px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .time {
+      font-size: 12px;
+      text-align: right;
+      color: #555;
+    }
+
+    /* RESPONSIVE MODE */
+    @media (max-width: 600px) {
+      .sidebar {
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        justify-content: space-around;
+        padding: 5px 0;
+        z-index: 1000;
+      }
+
+      .main-content {
+        margin-left: 0;
+        margin-bottom: 70px;
+        padding: 10px;
+      }
+
+      .sidebar-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin-bottom: 2px;
+      }
+
+      .sidebar a {
+        font-size: 10px;
+      }
+
+      .date-display {
+        width: 100%;
+      }
+
+      .tambah-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="Home.html">
+      <div class="sidebar-icon">🏠</div>
+      Halaman
+    </a>
+    <a href="Task-list.html">
+      <div class="sidebar-icon">📋</div>
+      Tugas
+    </a>
+    <a href="Kategori.html">
+      <div class="sidebar-icon">📑</div>
+      Kategori
+    </a>
+    <a href="Riwayat.html">
+      <div class="sidebar-icon">📜</div>
+      Riwayat
+    </a>
+    <a href="Profil.html">
+      <div class="sidebar-icon">👤</div>
+      Profil
+    </a>
+  </div>
+
+  <div class="main-content">
+    <div class="date-display">
+      <div class="month">Mon Jun</div>
+      <div class="day">10</div>
+    </div>
+
+    <!-- ✅ Tombol Tambah Tugas -->
+    <a href="Tambah-tugas.html" class="tambah-btn">+ Tambah Tugas</a>
+
+    <div class="task-section">
+      <h3>Tugas Prioritas</h3>
+      <div class="task-item">
+        <h4>Judul Tugas (Matakuliah)</h4>
+        <p>Deskripsi tugas singkat di sini</p>
+        <div class="time">9:41 AM</div>
+      </div>
+      <div class="task-item">
+        <h4>Judul Tugas (Matakuliah)</h4>
+        <p>Deskripsi tugas singkat di sini</p>
+        <div class="time">9:41 AM</div>
+      </div>
+      <div class="task-item">
+        <h4>Judul Tugas (Matakuliah)</h4>
+        <p>Deskripsi tugas singkat di sini</p>
+        <div class="time">9:41 AM</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
